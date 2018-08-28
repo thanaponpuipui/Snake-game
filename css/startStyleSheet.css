@@ -1,0 +1,53 @@
+/*set screen*/
+*{
+	margin: auto;
+	/*background-image:cool.png;*/
+}
+body{
+	background-color: #24442f;
+}
+#screen {
+	/*flex-wrap: wrap;*/
+	border:1px solid #d3d3d3;
+	margin: 0 auto;
+	width: 800px;
+	height: 700px;
+	background-image: url("../img/back9.jpg");
+	background-repeat: no-repeat;
+	background-size: 800px 700px;
+	text-align: center;
+}
+#screen h1{
+	position: relative;
+	top: 25%;
+	font-size: 4em;
+	color : #ADFF2F;
+}
+#startMenu{
+	position: relative;
+	top: 45%;
+	font-size:40px;
+}
+#startMenu #subMenu{
+	position: relative;
+}
+#startMenu #startButton{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 36px;
+}
+.geomsize {
+   width: 20px;
+   height: 20px;
+}
+label. {
+	font-color: #ADFF2F;
+}
+.co{
+	color : #ADFF2F;
+	}

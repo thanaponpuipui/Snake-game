@@ -1,0 +1,61 @@
+<web-app>
+	<servlet>
+		<servlet-name>servlet</servlet-name>
+		<servlet-class>ScoreServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>servlet</servlet-name>
+		<url-pattern>/servlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GameModeServlet</servlet-name>
+		<servlet-class>GameModeServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>GameModeServlet</servlet-name>
+		<url-pattern>/GameStart</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>result</servlet-name>
+		<jsp-file>/result.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>result</servlet-name>
+		<url-pattern>/result</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>game</servlet-name>
+		<jsp-file>/snakegame.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>game</servlet-name>
+		<url-pattern>/game</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>index</servlet-name>
+		<jsp-file>/index.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>score</servlet-name>
+		<jsp-file>/score.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>score</servlet-name>
+		<url-pattern>/score</url-pattern>
+	</servlet-mapping>
+</web-app>
