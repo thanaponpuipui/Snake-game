@@ -84,14 +84,22 @@ var drawModule = (function () {
         y: Math.floor((Math.random() * 24) * 1)
       }
 
-      for (var i=0; i>snake.length; i++) {
-        var snakeX = snake[i].x;
-        var snakeY = snake[i].y;
-      
-        if (food.x===snakeX && food.y === snakeY) {
-          food.x = Math.floor((Math.random() * 27) * 1);
-          food.y = Math.floor((Math.random() * 24) * 1);
+      var isOnBody = function(){
+        let check = false;
+        for(var i=0; i>snake.length; i++){
+          var snakeX = snake[i].x;
+          var snakeY = snake[i].y;
+        
+          if (food.x===snakeX && food.y === snakeY) {
+            check = true;
+          }
         }
+        return check;
+      }
+
+      while(isOnBody()) {
+        food.x = Math.floor((Math.random() * 27) * 1);
+        food.y = Math.floor((Math.random() * 24) * 1);
       }
   }
 
