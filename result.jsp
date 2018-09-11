@@ -8,6 +8,7 @@
 	<body>
 	<div id='screen'>
 	<div id="startMenu">
+		<h1>${sessionScope.gameMode}</h1>
 		<span class=coo><p><h2>Score:${param.score}</h2></p></span>
 		<div id="a">
 		<form method='post' action='servlet'>

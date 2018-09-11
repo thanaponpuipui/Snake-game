@@ -12,12 +12,16 @@ public class GameModeServlet extends HttpServlet{
 		request.setCharacterEncoding("Windows-31J");
 		HttpSession session=request.getSession();
 		String speed = request.getParameter("GameSpeed");
+		
 		if(speed==null){speed="normal";};
 		System.out.println(speed);
 		String gameSpeed = "120";
+		String mode = "Normal Mode";
 		if(speed.equals("fast")){
 			gameSpeed = "70";
+			mode = "Fast Mode";
 		}
+		session.setAttribute("gameMode",mode);
 		session.setAttribute("gameSpeed",gameSpeed);
 		RequestDispatcher dis = request.getRequestDispatcher("game");
 		
