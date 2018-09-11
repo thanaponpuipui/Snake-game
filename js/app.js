@@ -5,13 +5,13 @@ drawModule.init();
 	document.onkeydown = function(event) {
 
         keyCode = event.keyCode;
-
         switch(keyCode) {
         
         case LEFT_KEY:
         case A_KEY: 
           if (direction != 'right' || score===1) {
             direction = 'left';
+            moveQueue.unshift(direction);
             console.log('left');
           }
           break;
@@ -20,6 +20,7 @@ drawModule.init();
         case D_KEY:
           if (direction != 'left' || score===1) {
           direction = 'right';
+          moveQueue.unshift(direction);
           console.log('right');
           }
           break;
@@ -28,6 +29,7 @@ drawModule.init();
         case W_KEY:
           if (direction != 'down' || score===1) {
           direction = 'up';
+          moveQueue.unshift(direction);
           console.log('up');
           }
           break;
@@ -36,6 +38,7 @@ drawModule.init();
         case S_KEY:
           if (direction != 'up' || score===1) {
           direction = 'down';
+          moveQueue.unshift(direction);
           console.log('down');
           }
           break;

@@ -13,14 +13,14 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class FastModeScoreWriter implements ScoreWriter{
-	public void writeScore(String score, String name){
+	public void writeScore(String score, String name, String path){
 		try{
 			Calendar cal=Calendar.getInstance();
 			SimpleDateFormat formatter=new SimpleDateFormat("yyyy/M/d(E) k:m:s");
 			
 			String now=formatter.format(cal.getTime());
 
-			File file=new File(FAST_MODE_SCORE_PATH);
+			File file=new File(path);
 			
 			BufferedWriter buff = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file,true),"Shift-JIS"));
 			

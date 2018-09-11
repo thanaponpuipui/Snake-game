@@ -14,10 +14,10 @@ import java.util.ArrayList;
 public class NormalModeScoreReader implements ScoreReader{
 	ArrayList<Integer> score = new ArrayList<Integer>();
 	ArrayList<String> name = new ArrayList<String>();
-	public void readScore(){
+	public void readScore(String path){
 		try{
-			System.out.println(NORMAL_SCORE_PATH);
-			File file = new File(NORMAL_SCORE_PATH);
+			System.out.println(path);
+			File file = new File(path);
 			BufferedReader buff = new BufferedReader(new InputStreamReader(new FileInputStream(file),"Shift-JIS"));
 			
 			String str="";
@@ -48,17 +48,17 @@ public class NormalModeScoreReader implements ScoreReader{
 			e.printStackTrace();
 		}
 	}
-	public int getHighScore(){
-		if(score.isEmpty() && name.isEmpty()){readScore();}
+	public int getHighScore(String path){
+		if(score.isEmpty() && name.isEmpty()){readScore(path);}
 		int HighScore = score.get(0);
 		return HighScore;
 	}
-	public ArrayList<ScoreBean> getScoreTable(){
-		if(score.isEmpty() && name.isEmpty()){readScore();}
+	public ArrayList<ScoreBean> getScoreTable(String path){
+		if(score.isEmpty() && name.isEmpty()){readScore(path);}
 		else{
 			score.clear();
 			name.clear();
-			readScore();
+			readScore(path);
 		}
 		ArrayList<ScoreBean> topten = new ArrayList<ScoreBean>();
 		for(int i = 0; i < score.size() && i < 10; i++){

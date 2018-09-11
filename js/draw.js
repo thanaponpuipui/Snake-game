@@ -38,7 +38,9 @@ var drawModule = (function () {
       var head = {x:snake[0].x, y:snake[0].y};
       /*var snakeX = snake[0].x;
       var snakeY = snake[0].y;*/
-
+      if (moveQueue.length){
+        direction = moveQueue.pop();
+      }
       if (direction == 'right') { 
         head.x++; }
       else if (direction == 'left') { 
@@ -47,7 +49,7 @@ var drawModule = (function () {
         head.y--; 
       } else if(direction == 'down') { 
         head.y++; }
-
+      moveQueue.length = 0;
       if (head.x == -1 || head.x == w/snakeSize || head.y == -1 || head.y == h/snakeSize || checkCollision(head.x, head.y, snake)) {
 
           // gameloop = clearInterval(gameloop);

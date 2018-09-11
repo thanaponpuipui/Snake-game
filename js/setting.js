@@ -8,7 +8,7 @@ var score = length;
 var snake;
 const snakeSize = 30;
 var food;
-// var moveQueue = [];
+var moveQueue = [];
 
 const LEFT_KEY = 37;
 const RIGHT_KEY = 39;

@@ -1,4 +1,4 @@
-<%@page language="java" contentType="text/html;charset=windows-31J" pageEncoding="windows-31J"%>
+<%@page contentType="text/html;charset=windows-31J" pageEncoding="windows-31J"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,16 +11,12 @@
 	<div id='screen'> 
 			
 		<div id="startMenu">
-			<form id='start' action="GameStart">
-				<div id="subMenu">
-					<input type="checkbox" name="GameSpeed" value="fast" class="geomsize">
-					<label for="GameSpeed">Fast Mode!</label>
-				</div>
-				<button id="startButton" onclick="startFunction()">Start</button>
+			<form id='start' action="GameStart" method="get">
+				<button type="button" id="startButton" onclick="startFunction()">Start</button>
 			</form>
 			<br>
 		</div>
 	</div>
-	<script type="text/javascript" scr="js/start.js"></script>
+	<script type="text/javascript" src="js/start.js"></script>
 </body>
 </html>

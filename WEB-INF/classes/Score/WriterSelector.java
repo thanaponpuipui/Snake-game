@@ -8,7 +8,7 @@ public class WriterSelector{
 	public void setWriter(ScoreWriter writer){
 		this.writer = writer;
 	}
-	public void writeScore(String score, String name){
-		writer.writeScore(score, name);
+	public void writeScore(String score, String name ,String path){
+		writer.writeScore(score, name, path);
 	}
 }

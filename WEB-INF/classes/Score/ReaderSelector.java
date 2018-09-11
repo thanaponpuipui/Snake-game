@@ -9,10 +9,10 @@ public class ReaderSelector{
 	public void setReader(ScoreReader reader){
 		this.reader = reader;
 	}
-	public int getHighScore(){
-		return reader.getHighScore();
+	public int getHighScore(String path){
+		return reader.getHighScore(path);
 	}
-	public ArrayList getScoreTable(){
-		return reader.getScoreTable();
+	public ArrayList getScoreTable(String path){
+		return reader.getScoreTable(path);
 	}
 }

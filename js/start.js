@@ -1,5 +1,5 @@
-var start = document.getElementById('startButton');
+var start = document.getElementById("start");
 
-var startFunction = function(){
-		
+function startFunction() {
+	start.innerHTML = "<button id='startButton'>Normal</button><br><button id='startButton' name='GameSpeed' value='fast'>Fast</button>";
 }
