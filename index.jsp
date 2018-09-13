@@ -15,6 +15,10 @@
 				<button type="button" id="startButton" onclick="startFunction()">Start</button>
 			</form>
 			<br>
+			<form id='start' action="servlet" method="get">
+				<button>Score</button>
+			</form>
+			
 		</div>
 	</div>
 	<script type="text/javascript" src="js/start.js"></script>

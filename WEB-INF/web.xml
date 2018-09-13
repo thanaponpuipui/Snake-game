@@ -58,4 +58,14 @@
 		<servlet-name>score</servlet-name>
 		<url-pattern>/score</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>scoretable</servlet-name>
+		<jsp-file>/scoreTable.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>scoretable</servlet-name>
+		<url-pattern>/scoretable</url-pattern>
+	</servlet-mapping>
 </web-app>

@@ -14,9 +14,9 @@ public class GameModeServlet extends HttpServlet{
 		String speed = request.getParameter("GameSpeed");
 		
 		if(speed==null){speed="normal";};
-		System.out.println(speed);
-		String gameSpeed = "120";
-		String mode = "Normal Mode";
+			System.out.println(speed);
+			String gameSpeed = "120";
+			String mode = "Normal Mode";
 		if(speed.equals("fast")){
 			gameSpeed = "70";
 			mode = "Fast Mode";

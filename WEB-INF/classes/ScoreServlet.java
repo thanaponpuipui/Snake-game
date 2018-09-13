@@ -15,35 +15,21 @@ import Score.ScoreWriter.*;
 import Score.ScoreReader.*;
 
 public class ScoreServlet extends HttpServlet{
-	
+
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		
-		String NORMAL_SOCRE = "/ScoreData/NormalModeScore.txt";
-		String FAST_SOCRE = "/ScoreData/FastModeScore.txt";
-		
 		request.setCharacterEncoding("Windows-31J");
-		
-		ServletContext servletContext = getServletContext();
-		String contextPath = servletContext.getRealPath(File.separator);
-		
-		String path;
 		
 		String score = request.getParameter("score");
 		HttpSession session = request.getSession();
 		String mode = String.valueOf(session.getAttribute("gameSpeed"));
-		System.out.println(mode);
 		String name = request.getParameter("name");
 		
-		if(mode == "70"){
-			path = contextPath + FAST_SOCRE;
-		}else{
-			path = contextPath + NORMAL_SOCRE;
-		}
+		String path = getPath(mode);
 		
 		WriterSelector writer = new WriterSelector();
 		ScoreWriter sw = WriterFactory.getWriter(mode);
 		writer.setWriter(sw);
-		System.out.println(String.valueOf(sw));
 		writer.writeScore(score, name, path);
 		
 		ReaderSelector reader = new ReaderSelector();
@@ -55,5 +41,45 @@ public class ScoreServlet extends HttpServlet{
 		RequestDispatcher dis = request.getRequestDispatcher("score");
 		
 		dis.forward(request,response);
+	}
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+	throws IOException, ServletException{
+
+		request.setCharacterEncoding("Windows-31J");
+
+		String fastPath = getPath("70");
+		String normalPath = getPath("120");
+		ReaderSelector reader = new ReaderSelector();
+
+		ScoreReader normal = ReaderFactory.getReader("120");
+		ScoreReader fast = ReaderFactory.getReader("70");
+
+		reader.setReader(normal);
+		reader.setReader(fast);
+
+		request.setAttribute("normalScore",reader.getScoreTable(normalPath));
+		request.setAttribute("fastScore",reader.getScoreTable(fastPath));
+
+		RequestDispatcher dis = request.getRequestDispatcher("scoretable");
+
+		dis.forward(request, response);
+	}
+
+	public String getPath(String mode){
+
+		final String NORMAL_SOCRE = "/ScoreData/NormalModeScore.txt";
+		final String FAST_SOCRE = "/ScoreData/FastModeScore.txt";
+		String path = null;
+
+		ServletContext servletContext = getServletContext();
+		String contextPath = servletContext.getRealPath(File.separator);
+
+		if(mode == "70"){
+			path = contextPath + FAST_SOCRE;
+		}else{
+			path = contextPath + NORMAL_SOCRE;
+		}
+		return path;
 	}
 }

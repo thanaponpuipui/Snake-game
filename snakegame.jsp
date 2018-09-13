@@ -15,7 +15,6 @@
 
   
   <input type="hidden" name="gameSpeed" id="gs" value="${sessionScope.gameSpeed}">
-  <input type="hidden" name="highscore" id="hs" value="${applicationScope.highScore}">
   <form method="post" action="result" id="submitScore">
     <input type="hidden" name="score" id="score">
   </form>

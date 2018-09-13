@@ -21,4 +21,3 @@ const S_KEY = 83;
 const SPACE_KEY = 32;
 
 var delay = document.getElementById('gs').value;
-var highScore = document.getElementById('hs').value;
