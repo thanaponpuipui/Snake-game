@@ -16,7 +16,7 @@
 			</form>
 			<br>
 			<form id='start' action="servlet" method="get">
-				<button>Score</button>
+				<button id="startButton">Score</button>
 			</form>
 			
 		</div>
