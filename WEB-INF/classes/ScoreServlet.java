@@ -18,12 +18,17 @@ public class ScoreServlet extends HttpServlet{
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		
-		request.setCharacterEncoding("Windows-31J");
+		request.setCharacterEncoding("UTF-8");
 		
 		String score = request.getParameter("score");
 		HttpSession session = request.getSession();
 		String mode = String.valueOf(session.getAttribute("gameSpeed"));
 		String name = request.getParameter("name");
+		
+		name = name.replaceAll(",","");
+		name = name.replaceAll("<","&lt;");
+		name = name.replaceAll("<","&gt;");
+		name = name.replaceAll("&","&amp;");
 		
 		String path = getPath(mode);
 		
@@ -46,7 +51,7 @@ public class ScoreServlet extends HttpServlet{
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 	throws IOException, ServletException{
 
-		request.setCharacterEncoding("Windows-31J");
+		request.setCharacterEncoding("UTF-8");
 
 		String fastPath = getPath("70");
 		String normalPath = getPath("120");

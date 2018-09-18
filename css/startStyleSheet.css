@@ -41,19 +41,18 @@ body{
     display: inline-block;
     font-size: 36px;
     margin:2% 0%;
+    transition-duration: 0.4s;
 }
-.geomsize {
-   width: 20px;
-   height: 20px;
+#startMenu #startButton:hover{
+	background-color: white;
+	border: 2px solid #4CFF50;
+	color: black;
 }
-label. {
-	font-color: #ADFF2F;
+#startMenu #startButton:active{
+	padding: 10px 25px;
 }
-.co{
-	color : #ADFF2F;
-	}
-#start{
-    background-color: #4CAF50; /* Green */
+#startMenu #scoreButton{
+	background-color: #9d2700;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -62,4 +61,15 @@ label. {
     display: inline-block;
     font-size: 36px;
     margin:2% 0%;
+    transition-duration: 0.4s;
 }
+#startMenu #scoreButton:hover{
+	background-color: white;
+	border: 2px solid #AF504C;
+	color: black;
+}
+#startMenu #scoreButton:active{
+	padding: 10px 25px;
+}
+
+

@@ -1,4 +1,4 @@
-<%@page language="java" contentType="text/html;charset=windows-31J" pageEncoding="windows-31J"%>
+<%@page language="java" contentType="text/html;charset=Windows-31J" pageEncoding="Windows-31J"%>
 <!DOCTYPE html>
 <html>
  <head>
@@ -15,7 +15,7 @@
 
   
   <input type="hidden" name="gameSpeed" id="gs" value="${sessionScope.gameSpeed}">
-  <form method="post" action="result" id="submitScore">
+  <form method="post" action="result" id="submitScore" accept-charset="UTF-8">
     <input type="hidden" name="score" id="score">
   </form>
   <script src="js/setting.js"></script>

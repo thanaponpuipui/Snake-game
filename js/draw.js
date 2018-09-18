@@ -50,9 +50,9 @@ var drawModule = (function () {
       } else if(direction == 'down') { 
         head.y++; }
       moveQueue.length = 0;
-      if (head.x == -1 || head.x == w/snakeSize || head.y == -1 || head.y == h/snakeSize || checkCollision(head.x, head.y, snake)) {
+      if (head.x <= -1 || head.x >= w/snakeSize || head.y <= -1 || head.y >= h/snakeSize || checkCollision(head.x, head.y, snake)) {
 
-          // gameloop = clearInterval(gameloop);
+          gameloop = clearInterval(gameloop);
           document.getElementById("submitScore").submit();
         }
         
@@ -94,6 +94,7 @@ var drawModule = (function () {
         
           if (food.x===snakeX && food.y === snakeY) {
             check = true;
+            break;
           }
         }
         return check;

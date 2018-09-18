@@ -27,6 +27,7 @@ body{
 }
 #ScoreTable {
 	color: white;
+	display :flex;
 }
 
 button{
@@ -36,8 +37,22 @@ button{
 	padding:15px 32px;
 	font-size: 1.5em;
 	text-decoration: none;
+	margin-top: 5%;
 	cursor: pointer;
+	transition-duration: 0.4s;
 }
 button:hover{
+	background-color: green;
 	border-color:#1affff;
+}
+button:active{
+	position: relative;
+	top: 5px;
+	left: 5px;
+	border-color: purple;
+	background-color: seagreen;
+}
+
+#ScoreTable > div{
+	margin : 0 auto;
 }

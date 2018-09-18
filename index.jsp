@@ -1,4 +1,4 @@
-<%@page contentType="text/html;charset=windows-31J" pageEncoding="windows-31J"%>
+<%@page contentType="text/html;charset=Windows-31J" pageEncoding="Windows-31J"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,12 +11,11 @@
 	<div id='screen'> 
 			
 		<div id="startMenu">
-			<form id='start' action="GameStart" method="get">
+			<form id='start' action="GameStart" method="get" accept-charset="UTF-8">
 				<button type="button" id="startButton" onclick="startFunction()">Start</button>
 			</form>
-			<br>
-			<form id='start' action="servlet" method="get">
-				<button id="startButton">Score</button>
+			<form action="servlet" method="get" accept-charset="UTF-8">
+				<button id="scoreButton">Score</button>
 			</form>
 			
 		</div>

@@ -1,4 +1,4 @@
-<%@page contentType="text/html;charset=windows-31J" pageEncoding="windows-31J"%>
+<%@page contentType="text/html;charset=Windows-31J" pageEncoding="Windows-31J"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +8,7 @@
 </head>
 <body>
 	<div id="screen">
+		<h1 align="conter">Score Table</h1>
 		<div id="ScoreTable">
 			<div id="NormalScoreTable">
 				<h1>Normal Score</h1>
@@ -34,6 +35,7 @@
 				</table>
 			</div>
 		</div>
+		<button onclick="window.location.href='index'">スタート画面に戻る</button>
 	</div>
 </body>
 </html>
