@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>ƒXƒRƒAˆê——</title>
 	<link rel="stylesheet" type="text/css" href="css/result.css">
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 </head>

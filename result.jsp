@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<title>リザルト</title>
+	<title>ゲームオーバー</title>
 	<link rel="stylesheet" type="text/css" href="css/result.css">
 	</head>
 	<body>
