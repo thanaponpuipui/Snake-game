@@ -11,11 +11,11 @@
 	<div id='screen'> 
 			
 		<div id="startMenu">
-			<form class='start' action="GameStart" method="get">
+			<form id='start' action="GameStart" method="get">
 				<button type="button" id="startButton" onclick="startFunction()">Start</button>
 			</form>
 			<br>
-			<form class='start' action="servlet" method="get">
+			<form id='start' action="servlet" method="get">
 				<button id="startButton">Score</button>
 			</form>
 			
