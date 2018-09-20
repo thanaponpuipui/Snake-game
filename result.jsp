@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<title>ゲームオーバー</title>
+	<title>SCORE</title>
 	<link rel="stylesheet" type="text/css" href="css/result.css">
 	</head>
 	<body>
@@ -12,10 +12,10 @@
 		<span class=coo><p><h2>Score:${param.score}</h2></p></span>
 		<div id="a">
 		<form method='post' action='servlet' accept-charset="UTF-8">
-			<span style="color:white";>プレイヤー名:</span>
-			<input type='text' name='name' size="30" style="font-size:30px;" maxlength='8' required pattern="[^,'!?\x2A\x2B\x2D\x22\x3C\x3E\x2F\x5C]+">
+			<span style="color:white; font-size:1.5em;">PLAYER NAME:</span>
+			<input type='text' name='name' size="15" style="font-size:30px;" maxlength='8' required pattern="[^,'!?\x2A\x2B\x2D\x22\x3C\x3E\x2F\x5C]+">
 			<input type='hidden' value='${param.score}' name='score'>
-			<input type='submit' value='登録' size="50" style="font-size:30px;">
+			<input id="submit" type='submit' value='SUBMIT' size="50" style="font-size:30px;">
 		</div>
 	</div>
 	</div>	

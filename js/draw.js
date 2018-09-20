@@ -87,7 +87,7 @@ var drawModule = (function () {
       }
 
       var isOnBody = function(){
-        let check = false;
+        var check = false;
         for(var i=0; i>snake.length; i++){
           var snakeX = snake[i].x;
           var snakeY = snake[i].y;

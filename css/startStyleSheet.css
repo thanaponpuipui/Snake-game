@@ -9,7 +9,7 @@ body{
 #screen {
 	/*flex-wrap: wrap;*/
 	border:1px solid #d3d3d3;
-	margin: 20px auto;
+	margin: 24px auto;
 	width: 810px;
 	height: 720px;
 	background-image: url("../img/back9.jpg");

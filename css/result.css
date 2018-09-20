@@ -5,7 +5,7 @@ body{
 #screen {
 	/*flex-wrap: wrap;*/
 	border:1px solid #d3d3d3;
-	margin: 20px auto;
+	margin: 24px auto;
 	width: 810px;
 	height: 720px;
 	background-color: #334d00;
@@ -30,6 +30,14 @@ body{
 	display :flex;
 }
 
+#ScoreTable > div{
+	margin : 0 auto;
+}
+table th,td{
+	width: 140px;
+}
+
+/*button customize*/
 button{
 	border: 2px solid red;
 	background-color: white;
@@ -53,6 +61,20 @@ button:active{
 	background-color: seagreen;
 }
 
-#ScoreTable > div{
-	margin : 0 auto;
+#submit{
+	border: 2px solid red;
+	background-color: white;
+	display:inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+#submit:hover{
+	border: 2px solid white;
+}
+#submit:active{
+	position: relative;
+	top: 5px;
+	left: 5px;
 }

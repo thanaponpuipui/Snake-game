@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset='utf-8'/>
-	<title>Snake Game</title>
+	<title>SNAKE GAME</title>
 	<link rel="stylesheet" type="text/css" href="css/startStyleSheet.css">
 	
 </head>
