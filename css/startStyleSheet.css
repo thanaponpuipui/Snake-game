@@ -9,12 +9,12 @@ body{
 #screen {
 	/*flex-wrap: wrap;*/
 	border:1px solid #d3d3d3;
-	margin: 0 auto;
-	width: 800px;
-	height: 700px;
+	margin: 20px auto;
+	width: 810px;
+	height: 720px;
 	background-image: url("../img/back9.jpg");
 	background-repeat: no-repeat;
-	background-size: 800px 700px;
+	background-size: 820px 720px;
 	text-align: center;
 }
 #screen h1{
